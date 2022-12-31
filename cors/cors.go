@@ -6,7 +6,7 @@ import (
 	"github.com/gorilla/handlers"
 )
 
-func Cors(next http.Handler) http.Handler {
+func Middleware(next http.Handler) http.Handler {
 	cors := handlers.CORS(
 		handlers.AllowedOrigins(
 			[]string{

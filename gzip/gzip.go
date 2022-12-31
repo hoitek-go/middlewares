@@ -50,7 +50,7 @@ func (w *compressResponseWriter) Flush() {
 	}
 }
 
-func Gzip(level int) func(http.Handler) http.Handler {
+func Middleware(level int) func(http.Handler) http.Handler {
 	return func(h http.Handler) http.Handler {
 		if level < gzip.DefaultCompression || level > gzip.BestCompression {
 			level = gzip.DefaultCompression

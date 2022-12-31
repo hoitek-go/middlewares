@@ -6,7 +6,7 @@ import (
 	"github.com/hoitek-go/kit/response"
 )
 
-func BodyLimit(limit int64) func(http.Handler) http.Handler {
+func Middleware(limit int64) func(http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 			if r.ContentLength > limit {
