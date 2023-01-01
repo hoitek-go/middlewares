@@ -13,7 +13,8 @@ func Middleware(next http.Handler) http.Handler {
 			err := recover()
 			if err != nil {
 				log.Println(err)
-				response.Error(w, "Internal server error", http.StatusInternalServerError)
+				serverError := response.ErrorInternalServerError("")
+				response.ErrorWithWriter(w, serverError, serverError.StatusCode)
 			}
 		}()
 		next.ServeHTTP(w, r)
