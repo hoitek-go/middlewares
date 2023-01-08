@@ -1,0 +1,8 @@
+mode: set
+github.com/hoitek-go/middlewares/bodyLimit/bodyLimit.go:9.62,10.46 1 1
+github.com/hoitek-go/middlewares/bodyLimit/bodyLimit.go:10.46,11.72 1 1
+github.com/hoitek-go/middlewares/bodyLimit/bodyLimit.go:11.72,12.31 1 1
+github.com/hoitek-go/middlewares/bodyLimit/bodyLimit.go:17.4,17.24 1 1
+github.com/hoitek-go/middlewares/bodyLimit/bodyLimit.go:12.31,16.5 3 1
+github.com/hoitek-go/middlewares/cors/cors.go:9.49,17.76 2 1
+github.com/hoitek-go/middlewares/cors/cors.go:17.76,19.3 1 1

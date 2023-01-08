@@ -41,11 +41,11 @@ func (cw *compressResponseWriter) ReadFrom(r io.Reader) (int64, error) {
 	return io.Copy(cw.compressor, r)
 }
 
-func (w *compressResponseWriter) Flush() {
-	if f, ok := w.compressor.(flusher); ok {
+func (cw *compressResponseWriter) Flush() {
+	if f, ok := cw.compressor.(flusher); ok {
 		f.Flush()
 	}
-	if f, ok := w.w.(http.Flusher); ok {
+	if f, ok := cw.w.(http.Flusher); ok {
 		f.Flush()
 	}
 }
